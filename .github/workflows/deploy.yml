@@ -15,7 +15,7 @@ jobs:
           REDEPLOYED=false
           if [ "${{ github.run_number }}" -ge 2 ]; then REDEPLOYED=true; fi
           printf '{"deployed_by":"github-actions","sha":"%s","run":%s,"redeployed":%s}\n' \
-            "${{ github.sha }}" "${{ github.run_number }}" "$REDEPLOYED" > site/build.json
+            "${{ github.sha }}" "${{ github.run_number }}" "$REDEPLOYED" > Ship the College Site Automatically with GitHub Actions/site/build.json
 
       - name: Upload to Azure Storage
         env:
